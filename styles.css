@@ -1,8 +1,32 @@
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.nav-bar {
+  background-color: #99b0ac;
+  height: 80px;
+}
+
 .main-container {
-  padding-top: 30px;
+  padding-top: 50px;
+}
+
+a {
+  text-decoration: none !important;
+  color: white !important;
+}
+
+a:hover {
+  color: #295850 !important;
+}
+
+ul li {
+  font-weight: 300;
+  margin-bottom: 5px;
 }
 
 ul li:hover {
+  background-color: #bedbd6;
   transform: translateY(-5px);
   box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
@@ -15,4 +39,108 @@ ul li:hover {
 }
 .message-box{
   cursor: pointer;
+  height: 150px;
 }
+.message-text{
+  height: 70px;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 15px;
+}
+.message-sender {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.column-one {
+  background-color: #295850;
+  width: 200px !important;
+}
+
+form {
+  display: flex;
+  align-items: center;
+  width: auto;
+  border-radius: 20px;
+  overflow: hidden;
+  background-color: #f2f2f2;
+}
+
+.search-input {
+  padding: 10px;
+  border: none;
+  background-color: transparent;
+  outline: none;
+  font-size: 16px;
+}
+
+.search-button {
+  border: none;
+  background-color: transparent;
+  padding: 10px;
+  cursor: pointer;
+}
+p {
+  text-overflow: ellipsis;
+}
+
+.fa-search {
+  color: #888;
+  font-size: 18px;
+}
+
+
+.user-icon {
+  color: white;
+  cursor: pointer;
+}
+
+.message-header {
+  background-color: #3a95ae50;
+  border-radius: 10px;
+}
+
+.email-subject {
+  font-weight: 700;
+}
+
+.reply-popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 500px;
+}
+textarea {
+  border: none;
+  outline: none;
+  resize: none;
+}
+
+.button {
+  background-color: white;
+  font-size: 13px;
+  border:2px solid #3a95ae;
+
+}
+.button:hover {
+  background-color: #3a95ae;
+  color: white;
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.email-content {
+  border: 1px solid #3a95ae;
+  text-align: justify;
+  background-color: #3a95ae10;
+}
+
+.indent {
+  text-indent: 2rem;
+}
+
