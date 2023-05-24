@@ -1,12 +1,13 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <!-- Required meta tags -->
+    
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+
     <!--fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,11 +16,12 @@
     <link rel="stylesheet" href="styles.css">
     <title>Bootstrap Grid Assignment</title>
   </head>
-  
+
   <body>
-    <!--Top NavBar-->
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top navbar-custom nav-bar p-2">
-      <div class="container-fluid ">
+    <div class="general-container container-fluid d-flex flex-column min-vh-100">
+      <!--Top NavBar-->
+    <nav class=" row navbar navbar-expand-lg nav-bar p-2">
+      <div class="container-fluid col">
         <!--hamburger menu-->
         <button class="navbar-toggler" 
         type="button" 
@@ -38,11 +40,11 @@
           </form>
         </div>
         <!--compose button-->
-        <button type="button" class="btn btn-light ">
+        <button type="button" class="btn btn-light" onclick="openForm()">
           <i class="fa-regular fa-pen-to-square"></i>
         </button>
         <!--Sidebar-->
-        <div class="offcanvas offcanvas-start column-one d-lg-none" tabindex="-1" id="sidebar" aria-labelledby="sidebar-label">
+        <div class="offcanvas offcanvas-start column-one d-lg-none"id="sidebar" >
           <div class="offcanvas-header mt-2">
             <i class="fa-solid fa-user fa-xl user-icon"></i>
             <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
@@ -50,7 +52,7 @@
           <div class="offcanvas-body">
             <ul class="nav flex-column">
               <li class="nav-item">
-                <a class="nav-link active navbar-link" aria-current="page" href="#">
+                <a class="nav-link active navbar-link"  href="#">
                   <i class="fa-solid fa-inbox inbox"></i> Inbox
                 </a>
               </li>
@@ -79,12 +81,13 @@
         </div>
       </div>
     </nav>
+
     <!--Bootstrap Grid-->
-    <main class="container-fluid mt-4 main-container h">
-      <div class="row w-100 justify-content-start">
+    <main class="main-container row container-fluid h-100 flex-grow-1 p-0">
+      <div class="row justify-content-start">
 
         <!--Sidebar-->
-        <div class="d-none d-lg-block pt-4 col-lg-auto col-xl-auto column-one">
+        <div class="column-one d-none d-lg-block pt-4 col-lg-auto">
           <ul class="navbar-nav text-center ">
             <li class="nav-item pb-2 border-bottom">
               <a href="#" class="nav-link profile">
@@ -118,10 +121,11 @@
             </li>
           </ul>
         </div>
+        <!--End Sidebar-->
 
         <!--Message stream-->
-        <div class="col-sm-12 col-md-4 col-lg-3 column-two">
-          <div class="row p-3 border-bottom border-light bg-secondary-subtle message-box">
+        <div class="column-two align-items-center justify-content-between col-sm-12 col-md-4 col-lg-3 overflow-auto message-container">
+          <div class="message-box row p-3 border-bottom border-light bg-secondary-subtle">
             <div class="col">
               <h5 class="font-weight-bold message-sender">Michael Jordan</h5>
             </div>
@@ -129,7 +133,7 @@
               <p class="text-end">May 13</p>
             </div>
             <div class="message-text">
-              <p>Emal preview Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus maxime dignissimos voluptas odit voluptate eius corrupti, aperiam, minus, perspiciatis id quibusdam harum excepturi hic recusandae. Blanditiis sit eos voluptas iusto.</p>
+              <p>I hope this email reaches you in the realm of eternal basketball greatness. It is with a heavy heart that I write to you today, knowing that our physical paths will never cross again. As I sit here, memories of our journeys together flood my mind. The battles we fought, the victories we celebrated, and the unspoken bond we shared - they remain etched in my soul. Our time on the court was nothing short of legendary, and it shaped the very fabric of basketball history.</p>
             </div>
           </div>
           
@@ -204,10 +208,95 @@
               <p>Emal preview Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus maxime dignissimos voluptas odit voluptate eius corrupti, aperiam, minus, perspiciatis id quibusdam harum excepturi hic recusandae. Blanditiis sit eos voluptas iusto.</p>
             </div>
           </div>
+
+          <div class="row p-3 border-bottom border-light message-box">
+            <div class="col">
+              <h5 class="font-weight-bold message-sender">LeBron James</h5>
+            </div>
+            <div class="col message-date">
+              <p class="text-end">May 10</p>
+            </div>
+            <div class="message-text">
+              <p>Emal preview Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus maxime dignissimos voluptas odit voluptate eius corrupti, aperiam, minus, perspiciatis id quibusdam harum excepturi hic recusandae. Blanditiis sit eos voluptas iusto.</p>
+            </div>
+          </div>
+
+          <div class="row p-3 border-bottom border-light message-box">
+            <div class="col">
+              <h5 class="font-weight-bold message-sender">Charles Barkley</h5>
+            </div>
+            <div class="col message-date">
+              <p class="text-end">May 8</p>
+            </div>
+            <div class="message-text">
+              <p>Emal preview Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus maxime dignissimos voluptas odit voluptate eius corrupti, aperiam, minus, perspiciatis id quibusdam harum excepturi hic recusandae. Blanditiis sit eos voluptas iusto.</p>
+            </div>
+          </div>
+
+          <div class="row p-3 border-bottom border-light message-box">
+            <div class="col">
+              <h5 class="font-weight-bold message-sender">Stephen Curry</h5>
+            </div>
+            <div class="col message-date">
+              <p class="text-end">May 9</p>
+            </div>
+            <div class="message-text">
+              <p>Emal preview Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus maxime dignissimos voluptas odit voluptate eius corrupti, aperiam, minus, perspiciatis id quibusdam harum excepturi hic recusandae. Blanditiis sit eos voluptas iusto.</p>
+            </div>
+          </div>
+
+          <div class="row p-3 border-bottom border-light message-box">
+            <div class="col">
+              <h5 class="font-weight-bold message-sender">Stephen Curry</h5>
+            </div>
+            <div class="col message-date">
+              <p class="text-end">May 9</p>
+            </div>
+            <div class="message-text">
+              <p>Emal preview Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus maxime dignissimos voluptas odit voluptate eius corrupti, aperiam, minus, perspiciatis id quibusdam harum excepturi hic recusandae. Blanditiis sit eos voluptas iusto.</p>
+            </div>
+          </div>
+
+          <div class="row p-3 border-bottom border-light message-box">
+            <div class="col">
+              <h5 class="font-weight-bold message-sender">Stephen Curry</h5>
+            </div>
+            <div class="col message-date">
+              <p class="text-end">May 9</p>
+            </div>
+            <div class="message-text">
+              <p>Emal preview Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus maxime dignissimos voluptas odit voluptate eius corrupti, aperiam, minus, perspiciatis id quibusdam harum excepturi hic recusandae. Blanditiis sit eos voluptas iusto.</p>
+            </div>
+          </div>
+
+          <div class="row p-3 border-bottom border-light message-box">
+            <div class="col">
+              <h5 class="font-weight-bold message-sender">Stephen Curry</h5>
+            </div>
+            <div class="col message-date">
+              <p class="text-end">May 9</p>
+            </div>
+            <div class="message-text">
+              <p>Emal preview Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus maxime dignissimos voluptas odit voluptate eius corrupti, aperiam, minus, perspiciatis id quibusdam harum excepturi hic recusandae. Blanditiis sit eos voluptas iusto.</p>
+            </div>
+          </div>
+
+          <div class="row p-3 border-bottom border-light message-box">
+            <div class="col">
+              <h5 class="font-weight-bold message-sender">Stephen Curry</h5>
+            </div>
+            <div class="col message-date">
+              <p class="text-end">May 9</p>
+            </div>
+            <div class="message-text">
+              <p>Emal preview Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus maxime dignissimos voluptas odit voluptate eius corrupti, aperiam, minus, perspiciatis id quibusdam harum excepturi hic recusandae. Blanditiis sit eos voluptas iusto.</p>
+            </div>
+          </div>
         </div>
+        <!--End Message Stream-->
 
         <!--Full Message-->
-        <div class="d-none mt-3 d-md-block col-md-8 col-lg-6 column-three border-start p-4">
+        <div class="full-message column-three d-none mt-3 d-md-block col-md-8 col-lg-6  border-start p-4 overflow-auto justify-content-center ">
           <div class="row p-2 ms-3 mb-2 message-header">
             <div class="col">
                 <h6 class="email-subject">Email Subject</h6>
@@ -241,26 +330,43 @@
               <button class="button rounded-2"><i class="fa-solid fa-share me-1"></i>Forward</button>
             </div>
           </div>
-          <!--Reply Form-->
-          <div class="reply-popup p-3" id="replyForm">
-            <form class="form-control form-container mt-3 w-100">
-              <div class="row">
-                <textarea cols="30" rows="10" placeholder="Reply here..."></textarea>
-              </div>
-              <div class="row p-2 border-top border-dark-subtle g-0 ">
-                <div class="col"></div>
-                <div class="col col-auto me-2">
-                  <button type="reset" class="button rounded-2 w-100">Submit</button>
-                </div>
-                <div class="col col-auto">
-                  <button type="button" class="button rounded-2 w-100" onclick="closeForm(), showUtilityButtons()">Close</button>
-                </div>
-              </div>
-            </form>
-          </div>
         </div>
+        <!--End Full Message-->
       </div>
+
+      <!--Reply/Compose Form-->
+      <div class="reply-popup p-3 rounded-3" id="replyForm">
+        <form class="reply-form form-control form-container mt-3 w-100">
+          <div class="form-floating recipient-email-container mb-3">
+            <input type="email" class="form-control" id="email-input" placeholder="name@example.com">
+            <label for="email-input">Recipient Email</label>
+          </div>
+          <div class="form-floating email-subject-container mb-3">
+            <input type="text" class="form-control" id="subject-input" placeholder="Subject">
+            <label for="Subject-input">Subject</label>
+          </div>
+          <div class="row reply-box p-1 bg-body-secondary">
+            <textarea cols="30" rows="10" placeholder="Write here..."></textarea>
+          </div>
+          <div class="row p-2 g-0 ">
+            <div class="col"></div>
+            <div class="col col-auto me-2">
+              <button type="reset" class="button rounded-2 w-100">Send</button>
+            </div>
+            <div class="col col-auto">
+              <button type="button" class="button rounded-2 w-100" onclick="closeForm(), showUtilityButtons()">Close</button>
+            </div>
+          </div>
+        </form>
+      </div>
+      <!--End Reply/Compose Form-->
+
     </main>
+    <!--End bootstrap grid-->
+
+    </div>
+
+    
 
     <!-- Bootstrap Bundle with Popper.js -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>

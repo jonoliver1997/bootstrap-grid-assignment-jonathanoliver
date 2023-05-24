@@ -1,14 +1,25 @@
-body {
+body, html {
   font-family: 'Montserrat', sans-serif;
+  height: 95vh;
+  width: 100%;
+  padding: 0;
+  margin: 0;
 }
+
+.general-container {
+    width: 100vw;
+    height: 100%;
+    min-height: 100%;
+    box-sizing: border-box;
+  
+    
+}
+
+
 
 .nav-bar {
   background-color: #99b0ac;
   height: 80px;
-}
-
-.main-container {
-  padding-top: 50px;
 }
 
 a {
@@ -61,13 +72,15 @@ ul li:hover {
   width: 200px !important;
 }
 
+
+
 form {
   display: flex;
-  align-items: center;
+  justify-content: space-between;
   width: auto;
   border-radius: 20px;
-  overflow: hidden;
   background-color: #f2f2f2;
+  width: 100%;;
 }
 
 .search-input {
@@ -75,7 +88,7 @@ form {
   border: none;
   background-color: transparent;
   outline: none;
-  font-size: 16px;
+  font-size: 14px;
 }
 
 .search-button {
@@ -114,7 +127,14 @@ p {
   bottom: 0;
   right: 0;
   width: 500px;
+  background-color: #b5d3db;
 }
+
+.reply-form {
+  background-color: #b5d3db;
+  border: none;
+}
+
 textarea {
   border: none;
   outline: none;
@@ -131,7 +151,7 @@ textarea {
   background-color: #3a95ae;
   color: white;
   box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  transition: transform 0.1s ease-in-out, box-shadow 0.1s ease-in-out;
 }
 
 .email-content {
@@ -144,3 +164,20 @@ textarea {
   text-indent: 2rem;
 }
 
+.message-container {
+  height: 90vh;
+}
+
+.full-message {
+  height: 90vh;
+}
+@media only screen and (max-width: 767px) {
+  .main-container{
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+  }
+  .reply-popup {
+    width: 70%;
+  }
+}
